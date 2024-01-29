@@ -1,0 +1,5 @@
+.table{
+    text-wrap: initial;
+    table-layout: fixed;
+    width: 100%;
+}
