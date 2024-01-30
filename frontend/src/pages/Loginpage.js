@@ -18,7 +18,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { useNavigate } from "react-router-dom";
 
 import SimpleNavBar from "../components/SimpleNavBar";
-import cover from "{{ Assets::disk('local')->url('bg1.jpg') }}"
+import bg1 from "../assets/bg1.jpg"
 import {keyframes} from "@emotion/react";
 
 import Footer from "../components/Footer";
@@ -148,7 +148,7 @@ function Loginpage() {
             <SimpleNavBar/>
             {/*Images, texts and buttons ...*/}
             <Box position = "relative" minH ="100vh"
-                 fontFamily = "Calibri" backgroundImage = {cover} animation = {cover_animation}>
+                 fontFamily = "Calibri" backgroundImage = {bg1} animation = {cover_animation}>
                 <VStack
                         h = "fit-content"
                         zIndex = "2001"
