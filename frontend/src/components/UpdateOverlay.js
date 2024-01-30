@@ -68,7 +68,7 @@ const UpdateOverlay = ({ isOpen, onClose }) => {
 
     const checkStatus = async (session_id) => {
         try {
-            const response = await axios.get(`https://172.31.39.251/database/api/upload_progress/?session_id=${session_id}`);
+            const response = await axios.get(`http://3.26.36.185/database/api/upload_progress/?session_id=${session_id}`);
             const { processed, total } = response.data;
             if (total > max_length){
                 max_length = total
@@ -120,7 +120,7 @@ const UpdateOverlay = ({ isOpen, onClose }) => {
 
         try {
             const uploadResponse = await axios.post(
-                'https://172.31.39.251/database/api/upload_and_process',
+                'http://3.26.36.185/database/api/upload_and_process',
                 formData,
                 { headers: { 'Content-Type': 'multipart/form-data' } }
             );
