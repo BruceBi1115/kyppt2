@@ -120,7 +120,7 @@ const UpdateOverlay = ({ isOpen, onClose }) => {
 
         try {
             const uploadResponse = await axios.post(
-                'http://127.0.0.1:8000/database/api/upload_and_process',
+                'http://172.31.39.251:8000/database/api/upload_and_process',
                 formData,
                 { headers: { 'Content-Type': 'multipart/form-data' } }
             );
