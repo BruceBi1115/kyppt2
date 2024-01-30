@@ -68,7 +68,7 @@ const UpdateOverlay = ({ isOpen, onClose }) => {
 
     const checkStatus = async (session_id) => {
         try {
-            const response = await axios.get(`http://127.0.0.1:8000/database/api/upload_progress/?session_id=${session_id}`);
+            const response = await axios.get(`http://172.31.39.251:3306/database/api/upload_progress/?session_id=${session_id}`);
             const { processed, total } = response.data;
             if (total > max_length){
                 max_length = total
