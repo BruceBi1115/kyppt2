@@ -14,13 +14,13 @@ import {
     VStack
 } from "@chakra-ui/react";
 import { ChakraProvider } from '@chakra-ui/react';
-import logincover from "../assets/login_cover.png";
+
 import { useNavigate } from "react-router-dom";
-import * as PropTypes from "prop-types";
+
 import SimpleNavBar from "../components/SimpleNavBar";
-import cover from "../assets/bg1.jpg"
+import cover from "{{ Assets::disk('local')->url('bg1.jpg') }}"
 import {keyframes} from "@emotion/react";
-import {motion} from "framer-motion";
+
 import Footer from "../components/Footer";
 import {FormControl} from "@mui/material";
 import {ViewIcon, ViewOffIcon} from "@chakra-ui/icons";
