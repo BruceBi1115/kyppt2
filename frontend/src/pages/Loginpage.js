@@ -18,7 +18,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { useNavigate } from "react-router-dom";
 
 import SimpleNavBar from "../components/SimpleNavBar";
-import bg1 from "../assets/logo.png"
+import bg1 from "../assets/bg1.jpg"
 import {keyframes} from "@emotion/react";
 
 import Footer from "../components/Footer";
