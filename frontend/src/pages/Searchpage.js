@@ -183,7 +183,7 @@ function Searchpage(){
             setInput(search_string)// confirm the inputed search term
             ///start to search
             setTimeout(()=>{
-                axios.get(`http://3.26.36.185/api/search`, {
+                axios.get(`https://3.26.36.185/api/search`, {
                     params: {query: search_string, type: searchType}
                 }).then(response => {
                     setResults(response.data.results)// get the search results
