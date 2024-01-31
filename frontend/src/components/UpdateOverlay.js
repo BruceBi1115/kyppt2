@@ -68,7 +68,7 @@ const UpdateOverlay = ({ isOpen, onClose }) => {
 
     const checkStatus = async (session_id) => {
         try {
-            const response = await axios.get(`http://172.31.33.44/database/api/upload_progress/?session_id=${session_id}`);
+            const response = await axios.get(`http://3.26.36.185/database/api/upload_progress/?session_id=${session_id}`);
             const { processed, total } = response.data;
             if (total > max_length){
                 max_length = total
@@ -120,7 +120,7 @@ const UpdateOverlay = ({ isOpen, onClose }) => {
 
         try {
             const uploadResponse = await axios.post(
-                'http://172.31.33.44/database/api/upload_and_process',
+                'http://3.26.36.185/database/api/upload_and_process',
                 formData,
                 { headers: { 'Content-Type': 'multipart/form-data' } }
             );
@@ -152,7 +152,7 @@ const UpdateOverlay = ({ isOpen, onClose }) => {
             <ModalOverlay/>
             <ModalContent>
                 <ModalHeader>Update Database</ModalHeader>
-                <ModalCloseButton/>
+                {/*<ModalCloseButton/>*/}
                 <form onSubmit={handleSubmit}>
                     <ModalBody>
                         {stage ? (
@@ -187,7 +187,7 @@ const UpdateOverlay = ({ isOpen, onClose }) => {
                         <Button bg={"#E64626"} mr={3} type="submit" isLoading={!!stage} loadingText={message}>
                             Upload Files
                         </Button>
-                        <Button bg = "silver" onClick={onClose} disabled={!!stage}>Cancel</Button>
+                        <Button bg = "silver" onClick={onClose} disabled={!!stage}>Hide</Button>
                     </ModalFooter>
                 </form>
             </ModalContent>
